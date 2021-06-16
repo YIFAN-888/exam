@@ -6,15 +6,20 @@ print(len(data))
 
 
 # ex02.py
-import re
-data = re.compile(r"[a-z][^@].com")
-emails=input('文字列を入力してください:')
+email = input(' メールアドレスを入力してください : ')
 
-for i in emails:
-    if not data.match(i):
-        print(i,'正しいメールアドレスです')
-    else:
-        print(i,'何かおかしいです')
+def check_mail(mail):
+	if email.count('@')==1 and not email[0]=='@' and not email[-1]=='@' :
+		flg=0
+	else:
+		flg = 1
+	return flg
+
+flg = check_mail(email)
+if flg==0:
+	print('正しいメールアドレスです')
+else:
+	print('何かおかしいです')
         
         
         
