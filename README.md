@@ -61,3 +61,5 @@ def listave():
 	ave=sum(list)/len(list)
 	print(ave)
 listave()
+
+2021/07/26更新，测试
